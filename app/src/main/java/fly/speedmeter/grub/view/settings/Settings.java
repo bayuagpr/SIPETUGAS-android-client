@@ -1,33 +1,45 @@
-package fly.speedmeter.grub;
+package fly.speedmeter.grub.view.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.Preference;
+import android.support.v7.preference.ListPreference;
+import android.support.v7.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceGroup;
+import android.support.v7.preference.PreferenceGroup;
 import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceFragmentCompat;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import fly.speedmeter.grub.BuildConfig;
+import fly.speedmeter.grub.R;
+
 
 /**
  * Created by fly on 19/04/15.
  */
-public class Settings extends ActionBarActivity {
+public class Settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         setContentView(R.layout.activity_settings);
-
-        android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.settingstoolbar);
+        android.support.v7.widget.Toolbar toolbar =  findViewById(R.id.settingstoolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Display the fragment as the main content.
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.content_frame, new SettingsFragment())
                 .commit();
@@ -44,23 +56,18 @@ public class Settings extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static class SettingsFragment extends PreferenceFragment {
+    public static class SettingsFragment extends PreferenceFragmentCompat {
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
 
-            for (int i = 0; i < getPreferenceScreen().getPreferenceCount(); ++i) {
-                Preference preference = getPreferenceScreen().getPreference(i);
-                if (preference instanceof PreferenceGroup) {
-                    PreferenceGroup preferenceGroup = (PreferenceGroup) preference;
-                    for (int j = 0; j < preferenceGroup.getPreferenceCount(); ++j) {
-                        updatePreference(preferenceGroup.getPreference(j));
-                    }
-                } else {
-                    updatePreference(preference);
-                }
-            }
+        }
+
+        @Override
+        public void onCreatePreferences(Bundle bundle, String s) {
+
         }
 
         private void updatePreference(Preference preference) {

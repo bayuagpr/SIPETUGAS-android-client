@@ -1,4 +1,4 @@
-package fly.speedmeter.grub;
+package fly.speedmeter.grub.services;
 
 /**
  * Created by fly on 17/04/15.

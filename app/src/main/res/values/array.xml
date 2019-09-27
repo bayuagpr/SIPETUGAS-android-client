@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- foreground color names array -->
+    <string-array name="supir_array">
+        <item>Bayu Agung</item>
+        <!--item>#00FFFF</item-->
+
+        <item>Irsyad Muafa</item>
+        <!--item>#F0FFFF</item-->
+
+        <item>Gerald Syaiful</item>
+        <!--item>#F5F5DC</item-->
+
+        <item>Cornsilk</item>
+        <!--item>#FFF8DC</item-->
+
+        <item>Abi Hakim</item>
+        <!--item>#FFFFF0</item-->
+
+        <item>Tedjo Brata</item>
+        <!--item>#FFFFF0</item-->
+
+        <item>Hendrawan</item>
+        <!--item>#FFFFF0</item-->
+    </string-array>
+
+    <!-- foreground color values array -->
+    <string-array name="supir_values_array">
+        <!--item>Aqua</item-->
+        <item>#00FFFF</item>
+
+        <!--item>Azure</item-->
+        <item>#F0FFFF</item>
+
+        <!--item>Beige</item-->
+        <item>#F5F5DC</item>
+
+        <!--item>Cornsilk</item-->
+        <item>#FFF8DC</item>
+
+        <!--item>Ivory</item-->
+        <item>#FFFFF0</item>
+
+        <!--item>Cornsilk</item-->
+        <item>#FFF9DC</item>
+
+        <!--item>Ivory</item-->
+        <item>#FFFFF4</item>
+    </string-array>
+
+
+    <!-- background color names array -->
+    <string-array name="bus_array">
+        <item>AB 3617 JH</item>
+        <!--item>#0000FF</item-->
+
+        <item>AB 1202 FA</item>
+        <!--item>#DC143C</item-->
+
+        <item>AB 8890 AD</item>
+        <!--item>#800080</item-->
+
+        <item>AB 2402 DEW</item>
+        <!--item>#008000</item-->
+
+    </string-array>
+
+    <!-- background color values array -->
+    <string-array name="bus_values_array">
+        <!--item>Blue</item-->
+        <item>#0000FF</item>
+
+        <!--item>Crimson</item-->
+        <item>#DC143C</item>
+
+        <!--item>Purple</item-->
+        <item>#800080</item>
+
+        <!--item>Green</item-->
+        <item>#008000</item>
+
+
+    </string-array>
+
+    <!-- background color names array -->
+    <string-array name="emergency_array">
+        <item>Mogok</item>
+        <!--item>#0000FF</item-->
+
+        <item>Besin Habis</item>
+        <!--item>#DC143C</item-->
+
+        <item>Perampokan</item>
+        <!--item>#800080</item-->
+
+        <item>Butuh Perotolongan Medis</item>
+        <!--item>#008000</item-->
+
+    </string-array>
+
+    <!-- background color values array -->
+    <string-array name="emergency_values_array">
+        <!--item>Blue</item-->
+        <item>#0000FF</item>
+
+        <!--item>Crimson</item-->
+        <item>#DC143C</item>
+
+        <!--item>Purple</item-->
+        <item>#800080</item>
+
+        <!--item>Green</item-->
+        <item>#008000</item>
+
+
+    </string-array>
+</resources>
